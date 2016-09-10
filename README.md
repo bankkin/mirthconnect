@@ -42,3 +42,5 @@ You can launch Mirth Connect Administrator by visiting DOCKER_IP:8083
 The default username and password are admin/admin
 
 Enjoy!
+
+Special Thanks to https://github.com/cancan101 for inspiration!
