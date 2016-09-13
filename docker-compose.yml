@@ -1,0 +1,23 @@
+version: "2"
+services:
+
+    mirthconnect:
+      image: bankkin/mirthconnect:1.0
+      container_name: mirthconnect
+      links:
+        - mysql
+      ports:
+        - 8083:8083
+        - 8443:8443
+
+    mysql:
+      image: mysql:5.7
+      container_name: mysql
+      command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+      volumes:
+        - /home/$USER/data/mysql:/var/lib/mysql
+      environment:
+        - MYSQL_DATABASE=mirthdb
+        - MYSQL_ROOT_PASSWORD=mirth
+      ports:
+        - 3306:3306
