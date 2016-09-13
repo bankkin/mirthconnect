@@ -2,7 +2,7 @@ version: "2"
 services:
 
     mirthconnect:
-      image: bankkin/mirthconnect:1.0
+      image: YOUR_IMAGE_NAME
       container_name: mirthconnect
       links:
         - mysql
